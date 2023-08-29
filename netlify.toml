@@ -4,3 +4,7 @@
   from = "/"
   to = "/.netlify/functions/index"
   status = 200
+[[redirects]]
+  from = "/test"
+  to = "/.netlify/functions/index"
+  status = 200
