@@ -45,7 +45,7 @@ let
   axios = require('axios')
 
 async function main(event, context) {
-  console.log(event, context)
+  console.log('EVENT', event)
   let T,L,D,R; // too long || didn't read ? true : 🐢 
 
       T  = []
@@ -70,7 +70,16 @@ async function main(event, context) {
     };  T.push(JSON.stringify(Video))
 }
 
-if (T){
+if (event.rawQuery === 'page=landing')
+{
+  return {
+    statusCode: 200,
+    body: "<h1>landing</h1>"
+  }
+}
+
+if (T)
+{
   return { 
     statusCode: 200, body: `[${T}]`
   }
