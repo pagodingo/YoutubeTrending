@@ -1,6 +1,6 @@
 module.exports = {
   landing: function (data) {
-return `
+    let page = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,30 +122,31 @@ return `
       <button id="subscribe">Open</button>
       <button id="download">Download</button>
     </div>
-    <div id="content"></div>
+    <div id="content">
+    `
+  for (var i = 0; i < data.length; ++i){
+    page += (
+      '<p  class="bracket" style="text-align:left">{</p>' +
+
+      `<div class="list">
+      <h5><span>"Title"</span>: "${data[i].Title}"</h5>
+      <h5><span>"Author"</span>: "${data[i].Author}"</h5>
+      <h5><span>"ID"</span>: "${data[i].ID}"</h5>
+      <h5><span>"Posted"</span>: "${data[i].Posted}"</h5>
+      <h5><span>"Views"</span>: "${data[i].Views}"</h5>
+      <h5><span>"CurrentDate"</span>: "${data[i].CurrentDate}"</h5>
+      <h5><span>"ID"</span>: "${data[i].ID}"</h5>  
+      <h5><span>"URL"</span>: "${data[i].URL}"</h5>
+      </div>`
+      + '<p class="bracket" style="text-align:left">}</p>'
+    )
+  }
+
+  page += ` 
   </div>
-</body>
-<script>
-  (async () => {
-    for (var i = 0; i < b.length; ++i){
-      document.getElementById('content').innerHTML += (
-        '<p  class="bracket" style="text-align:left">{</p>'` + 
-        `<div class="list">
-          <h5><span>"Title"</span>: "${data[i].Title}"</h5>
-          <h5><span>"Author"</span>: "${data[i].Author}"</h5>
-          <h5><span>"ID"</span>: "${data[i].ID}"</h5>
-          <h5><span>"Posted"</span>: "${data[i].Posted}"</h5>
-          <h5><span>"Views"</span>: "${data[i].Views}"</h5>
-          <h5><span>"CurrentDate"</span>: "${data[i].CurrentDate}"</h5>
-          <h5><span>"ID"</span>: "${data[i].ID}"</h5>  
-          <h5><span>"URL"</span>: "${data[i].URL}"</h5>
-          </div>`+ `
-           '<p class="bracket" style="text-align:left">}<span style="color:white">,</span></p>'
-      )
-    }
-  })()
-</script>
-</html>
-`
+  </div>
+  </body>
+  </html>`
+  return page;
 }
 }
