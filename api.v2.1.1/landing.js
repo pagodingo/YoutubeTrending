@@ -150,7 +150,7 @@ module.exports = {
   page += `
   <script>
   function downloadBase64File(contentBase64, fileName) {
-    const linkSource = `data:application/pdf;base64,${contentBase64}`;
+    const linkSource = 'data:application/pdf;base64,';
     const downloadLink = document.createElement('a');
     document.body.appendChild(downloadLink);
 
