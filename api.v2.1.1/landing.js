@@ -127,7 +127,6 @@ module.exports = {
   for (var i = 0; i < data.length; ++i){
     page += (
       '<p  class="bracket" style="text-align:left">{</p>' +
-
       `<div class="list">
       <h5><span>"Title"</span>: "${data[i].Title}"</h5>
       <h5><span>"Author"</span>: "${data[i].Author}"</h5>
