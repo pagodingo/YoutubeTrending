@@ -71,8 +71,10 @@ async function main(event, context) {
     };  T.push(JSON.stringify(Video))
 }
 
-if (event.rawQuery === 'page=landing') return 
-{ statusCode: 200, body: _(T) }
+if (event.rawQuery === 'page=landing'){
+  return { statusCode: 200, body: _(T) }
+} 
+
 
 if (T)
 {
