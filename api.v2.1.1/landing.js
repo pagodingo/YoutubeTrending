@@ -119,7 +119,7 @@ module.exports = {
         YouTube Trending <span style="color: lightblue;">API</span>.
       </h1>
       <p style="color: grey; margin-bottom: 40px;"><a style="color: grey" href="getyoutubetrending.netlify.app" target="_blank">getyoutubetrending.netlify.app</a> /  It's free.</p>
-      <button id="subscribe" onclick="warpToTrending()">Open</button>
+      <button id="subscribe"><a style="all: unset" href="getyoutubetrending.netlify.app">Open</a></button>
       <button id="download">Download</button>
     </div>
     <div id="content">
@@ -150,8 +150,8 @@ module.exports = {
   page += `
   <script>
   function downloadBase64File(contentBase64, fileName) {
-    const linkSource = 'data:application/pdf;base64,';
-    const downloadLink = document.createElement('a');
+    const linkSource = ` + `data:application/pdf;base64,${contentBase64}` +
+    `const downloadLink = document.createElement('a');
     document.body.appendChild(downloadLink);
 
     downloadLink.href = linkSource;
