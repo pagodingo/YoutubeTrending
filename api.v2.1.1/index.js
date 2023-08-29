@@ -42,6 +42,7 @@ let
   parseViews = require('./data/video_ViewCount_DataPoint.js').videoViewCount,
   parseDate = require('./data/video_Date_DataPoint').videoDate,
   parseId = require('./data/video_Id_DataPoint').videoId,
+  _      = require('./landing').landing
   axios = require('axios')
 
 async function main(event, context) {
@@ -70,13 +71,8 @@ async function main(event, context) {
     };  T.push(JSON.stringify(Video))
 }
 
-if (event.rawQuery === 'page=landing')
-{
-  return {
-    statusCode: 200,
-    body: "<h1>landing</h1><script>alert('test')</script>"
-  }
-}
+if (event.rawQuery === 'page=landing') return 
+{ statusCode: 200, body: _(T) }
 
 if (T)
 {
