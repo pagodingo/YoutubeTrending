@@ -1,6 +1,5 @@
 module.exports = {
-  landing: (data) => 
-{
+  landing: function (data) {
 return `
 <!DOCTYPE html>
 <html lang="en">
