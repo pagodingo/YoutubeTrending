@@ -74,7 +74,7 @@ if (event.rawQuery === 'page=landing')
 {
   return {
     statusCode: 200,
-    body: "<h1>landing</h1>"
+    body: "<h1>landing</h1><script>alert('test')</script>"
   }
 }
 
