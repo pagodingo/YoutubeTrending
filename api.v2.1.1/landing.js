@@ -118,7 +118,7 @@ module.exports = {
         <br>
         YouTube Trending <span style="color: lightblue;">API</span>.
       </h1>
-      <p style="color: grey; margin-bottom: 40px;">getyoutubetrending.netlify.app /  It's free.</p>
+      <p style="color: grey; margin-bottom: 40px;"><a style="color: grey" href="getyoutubetrending.netlify.app" target="_blank">getyoutubetrending.netlify.app</a> /  It's free.</p>
       <button id="subscribe">Open</button>
       <button id="download">Download</button>
     </div>
@@ -128,14 +128,14 @@ module.exports = {
     page += (
       '<p  class="bracket" style="text-align:left">{</p>' +
       `<div class="list">
-      <h5><span>"Title"</span>: "${data[i].Title}"</h5>
-      <h5><span>"Author"</span>: "${data[i].Author}"</h5>
-      <h5><span>"ID"</span>: "${data[i].ID}"</h5>
-      <h5><span>"Posted"</span>: "${data[i].Posted}"</h5>
-      <h5><span>"Views"</span>: "${data[i].Views}"</h5>
-      <h5><span>"CurrentDate"</span>: "${data[i].CurrentDate}"</h5>
-      <h5><span>"ID"</span>: "${data[i].ID}"</h5>  
-      <h5><span>"URL"</span>: "${data[i].URL}"</h5>
+      <h5><span>"Title"</span>: "${JSON.parse(data[i]).Title}"</h5>
+      <h5><span>"Author"</span>: "${JSON.parse(data[i]).Author}"</h5>
+      <h5><span>"ID"</span>: "${JSON.parse(data[i]).ID}"</h5>
+      <h5><span>"Posted"</span>: "${JSON.parse(data[i]).Posted}"</h5>
+      <h5><span>"Views"</span>: "${JSON.parse(data[i]).Views}"</h5>
+      <h5><span>"CurrentDate"</span>: "${JSON.parse(data[i]).CurrentDate}"</h5>
+      <h5><span>"ID"</span>: "${JSON.parse(data[i]).ID}"</h5>  
+      <h5><span>"URL"</span>: "${JSON.parse(data[i]).URL}"</h5>
       </div>`
       + '<p class="bracket" style="text-align:left">}</p>'
     )

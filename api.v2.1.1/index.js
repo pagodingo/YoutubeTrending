@@ -72,7 +72,7 @@ async function main(event, context) {
 }
 
 if (event.rawQuery === 'page=landing'){
-  return { statusCode: 200, body: _(JSON.parse(T)) }
+  return { statusCode: 200, body: _(T) }
 }
 
 if (T)
