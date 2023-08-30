@@ -108,20 +108,20 @@ module.exports = {
   <div id="container">
     <div id="landing">
 
-      <h1>
-        <span style="
-        border: 8px solid white;
-        padding-left: 35px;
-        padding-right: 25px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        font-size: 50px;
-        color: lightblue;
-        border-radius: 25px;">▶️</span><br>
-        <br>
-        YouTube Trending <span style="color: lightblue;">API</span>.
-      </h1>
-      <p style="color: grey; margin-bottom: 40px;"><a style="color: grey" href="https://getyoutubetrending.netlify.app" target="_blank">getyoutubetrending.netlify.app</a> /  It's free.</p>
+    <h1>
+    <span style="
+    border: 8px solid white;
+    padding-left: 35px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 50px;
+    color: lightblue;
+    border-radius: 25px;"><a style="all: unset; cursor: pointer; color: lightblue;"href="https://youtube.com/trending" target="_blank">▶️</a></span><br>
+    <br>
+    <a  target="_blank" href="https://youtube.com/trending" style="text-decoration: none; color: #fff">YouTube Trending <span style="color: lightblue;">API</span>.
+  </h1>
+  <p style="color: lightgrey; margin-bottom: 40px;"><u>https://</u> &nbsp;&nbsp; + &nbsp;&nbsp; <a  style="color: lightgrey" href="https://getyoutubetrending.netlify.app" target="_blank">getyoutubetrending.netlify.app/</a> &nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#fff">| &nbsp;  &nbsp; It's that </span> <span style="color:lightblue;" >free</span><span style="color: white">.</span></p>
       <button id="subscribe" onclick="warpToTrending()">Open</button>
       <button id="download" onclick="download()">Download</button>
     </div>
