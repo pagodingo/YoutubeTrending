@@ -120,7 +120,7 @@ module.exports = {
       </h1>
       <p style="color: grey; margin-bottom: 40px;"><a style="color: grey" href="getyoutubetrending.netlify.app" target="_blank">getyoutubetrending.netlify.app</a> /  It's free.</p>
       <button id="subscribe"><a style="all: unset" href="getyoutubetrending.netlify.app">Open</a></button>
-      <button id="download">Download</button>
+      <button id="download" onclick="download">Download</button>
     </div>
     <div id="content">
     `
@@ -149,16 +149,16 @@ module.exports = {
 
   page += `
   <script>
-  function downloadBase64File(contentBase64, fileName) {
-    const linkSource = ` + `data:application/pdf;base64,${contentBase64}` +
-    `const downloadLink = document.createElement('a');
-    document.body.appendChild(downloadLink);
-
-    downloadLink.href = linkSource;
-    downloadLink.target = '_self';
-    downloadLink.download = fileName;
-    downloadLink.click(); 
-}
+  async function download(){
+    console.log('click')
+      let a = await fetch('./test.json')
+      let b = await a.json()
+  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(${JSON.stringify(data)});
+  var dlAnchorElem = document.getElementById('downloadAnchorElem');
+  dlAnchorElem.setAttribute("href",     dataStr);
+  dlAnchorElem.setAttribute("download", "youtube_trending.json");
+  dlAnchorElem.click();
+    }
 
 function warpToTrending(){
   window.location.href = "https://getyoutubetrending.netlify.app
