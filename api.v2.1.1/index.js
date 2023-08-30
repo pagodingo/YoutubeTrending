@@ -46,7 +46,6 @@ let
   axios = require('axios')
 
 async function main(event, context) {
-  console.log('EVENT', event)
   let T,L,D,R; // too long || didn't read ? true : 🐢 
 
       T  = []
