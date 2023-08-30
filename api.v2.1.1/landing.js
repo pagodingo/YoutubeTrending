@@ -159,7 +159,7 @@ module.exports = {
     }
 
 function warpToTrending(){
-  window.location.href = "https://getyoutubetrending.netlify.app"
+  window.open("https://getyoutubetrending.netlify.app", "_blank");
 }
   </script>
   `
