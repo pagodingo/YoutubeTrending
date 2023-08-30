@@ -171,7 +171,7 @@ module.exports = {
       csv += data[i].ID + ','
       csv += data[i].URL + ','
     }
-  var dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(data);
+  var dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
   var anchor = document.getElementById('downloadAnchor');
   anchor.setAttribute("href",     dataStr);
   anchor.setAttribute("download", "youtube_trending.csv");
