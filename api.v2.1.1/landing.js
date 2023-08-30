@@ -152,10 +152,29 @@ module.exports = {
   page += `
   <script>
   async function download(){
-  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent('[' + ${JSON.stringify(data)} + ']');
+    if (!window.confirm('Download as .CSV: YouTube Trending?')) return;
+    let csv = ''
+    csv += 'Title,'
+    csv += 'Author,'
+    csv+= 'ID,'
+    csv+= 'Posted,'
+    csv+= 'Views,'
+    csv+= 'CurrentDate,'
+    csv+= 'ID,'
+    csv+= 'URL,'
+    for (var i = 0; i < data.length; ++i){
+      csv += data[i].Title + ','
+      csv += data[i].Author + ','
+      csv += data[i].Posted + ','
+      csv += data[i].Views + ','
+      csv += data[i].CurrentDate + ','
+      csv += data[i].ID + ','
+      csv += data[i].URL + ','
+    }
+  var dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(data);
   var anchor = document.getElementById('downloadAnchor');
   anchor.setAttribute("href",     dataStr);
-  anchor.setAttribute("download", "youtube_trending.json");
+  anchor.setAttribute("download", "youtube_trending.csv");
   anchor.click();
     }
 
