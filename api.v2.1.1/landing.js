@@ -119,8 +119,8 @@ module.exports = {
         YouTube Trending <span style="color: lightblue;">API</span>.
       </h1>
       <p style="color: grey; margin-bottom: 40px;"><a style="color: grey" href="getyoutubetrending.netlify.app" target="_blank">getyoutubetrending.netlify.app</a> /  It's free.</p>
-      <button id="subscribe"><a style="all: unset" href="getyoutubetrending.netlify.app">Open</a></button>
-      <button id="download" onclick="download">Download</button>
+      <button id="subscribe" onclick="warpToTrending()">Open</button>
+      <button id="download" onclick="download()">Download</button>
     </div>
     <div id="content">
     `
