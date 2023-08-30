@@ -71,8 +71,6 @@ async function main(event, context) {
 
 }
 
-
-if (D) return;
 if (event.rawQuery === 'page=landing'){
   return { statusCode: 200, body: _(T) }
 }
