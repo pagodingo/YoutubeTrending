@@ -170,8 +170,8 @@ module.exports = {
   page += `
   <script>
   async function download(){
-    if (!window.confirm('Download as .CSV: "youtube_trending" ?')) return;
-    let csv = '${csv}'
+    if (!window.confirm('Download as .CSV: youtube_trending ?')) return;
+    let csv = "${csv}"
   var dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
   var anchor = document.getElementById('downloadAnchor');
   anchor.setAttribute("href",     dataStr);
