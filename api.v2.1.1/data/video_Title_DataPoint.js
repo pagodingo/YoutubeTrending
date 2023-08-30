@@ -8,6 +8,6 @@ module.exports = {
             id = videoId
         let ago = id.indexOf(`"}],"accessibility":{"accessibilityData":{"`)
         //let str = id.split(`"}}},"descriptionSnippet":{"runs":[{"text":"`)[0].slice(0, ago).split(" ")
-        return videoId.split(`"}],"accessibility":{"accessibilityData":{"label":"`)[0]
+        return videoId.split(`"}],"accessibility":{"accessibilityData":{"label":"`)[0].replace('\u0026', '&')
     }
 }
