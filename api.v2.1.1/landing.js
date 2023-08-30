@@ -151,8 +151,6 @@ module.exports = {
   <script>
   async function download(){
     console.log('click')
-      let a = await fetch('./test.json')
-      let b = await a.json()
   var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(${JSON.stringify(data)});
   var dlAnchorElem = document.getElementById('downloadAnchorElem');
   dlAnchorElem.setAttribute("href",     dataStr);
@@ -161,7 +159,7 @@ module.exports = {
     }
 
 function warpToTrending(){
-  window.location.href = "https://getyoutubetrending.netlify.app
+  window.location.href = "https://getyoutubetrending.netlify.app"
 }
   </script>
   `
