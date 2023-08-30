@@ -48,6 +48,7 @@ module.exports = {
   }
 
   #subscribe {
+    cursor: pointer;
     color: white;
     outline: none;
     border: 1px solid lightblue;
@@ -70,6 +71,7 @@ module.exports = {
   }
 
   #download {
+    cursor: pointer;
     position:absolute;
     margin-left: 35px;
     color: white;
