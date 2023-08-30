@@ -55,7 +55,6 @@ async function main(event, context) {
            D.split(`"watchEndpoint":{"videoId":"`).length = 100 :
            D.split(`"watchEndpoint":{"videoId":"`).length - 1
 
-           console.log(parseDuration(D, i))
   for (var i = 0; i < L - 1; ++i) {
 
     let 
