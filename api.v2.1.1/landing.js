@@ -151,7 +151,7 @@ module.exports = {
   page += `
   <script>
   async function download(){
-  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(${[JSON.stringify(data)]});
+  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent([${JSON.stringify(data)}]);
   var anchor = document.getElementById('downloadAnchor');
   anchor.setAttribute("href",     dataStr);
   anchor.setAttribute("download", "youtube_trending.json");
