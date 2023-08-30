@@ -1,5 +1,23 @@
 module.exports = {
   landing: function (data) {
+    let csv = ''
+    csv += 'Title,'
+    csv += 'Author,'
+    csv+= 'ID,'
+    csv+= 'Posted,'
+    csv+= 'Views,'
+    csv+= 'CurrentDate,'
+    csv+= 'ID,'
+    csv+= 'URL,'
+    for (var i = 0; i < data.length; ++i){
+      csv += data[i].Title + ','
+      csv += data[i].Author + ','
+      csv += data[i].Posted + ','
+      csv += data[i].Views + ','
+      csv += data[i].CurrentDate + ','
+      csv += data[i].ID + ','
+      csv += data[i].URL + ','
+    }
     let page = `
 <!DOCTYPE html>
 <html lang="en">
@@ -153,24 +171,7 @@ module.exports = {
   <script>
   async function download(){
     if (!window.confirm('Download as .CSV: YouTube Trending?')) return;
-    let csv = ''
-    csv += 'Title,'
-    csv += 'Author,'
-    csv+= 'ID,'
-    csv+= 'Posted,'
-    csv+= 'Views,'
-    csv+= 'CurrentDate,'
-    csv+= 'ID,'
-    csv+= 'URL,'
-    for (var i = 0; i < data.length; ++i){
-      csv += data[i].Title + ','
-      csv += data[i].Author + ','
-      csv += data[i].Posted + ','
-      csv += data[i].Views + ','
-      csv += data[i].CurrentDate + ','
-      csv += data[i].ID + ','
-      csv += data[i].URL + ','
-    }
+    let csv = ${csv}
   var dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
   var anchor = document.getElementById('downloadAnchor');
   anchor.setAttribute("href",     dataStr);
