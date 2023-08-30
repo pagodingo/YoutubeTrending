@@ -55,6 +55,7 @@ async function main(event, context) {
            D.split(`"watchEndpoint":{"videoId":"`).length = 100 :
            D.split(`"watchEndpoint":{"videoId":"`).length - 1
 
+           console.log(parseDuration(D, i))
   for (var i = 0; i < L - 1; ++i) {
 
     let 
@@ -68,8 +69,11 @@ async function main(event, context) {
         ID: parseId(D, i + 1),
         URL: `https://www.youtube.com/watch?v=${parseId(D, i + 1)}`,
     };  T.push(JSON.stringify(Video))
+
 }
 
+
+if (D) return;
 if (event.rawQuery === 'page=landing'){
   return { statusCode: 200, body: _(T) }
 }
