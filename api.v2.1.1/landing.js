@@ -10,13 +10,13 @@ module.exports = {
     csv+= 'ID,'
     csv+= 'URL,'
     for (var i = 0; i < data.length; ++i){
-      csv += data[i].Title + ','
-      csv += data[i].Author + ','
-      csv += data[i].Posted + ','
-      csv += data[i].Views + ','
-      csv += data[i].CurrentDate + ','
-      csv += data[i].ID + ','
-      csv += data[i].URL + ','
+      csv += JSON.parse(data[i]).Title + ','
+      csv += JSON.parse(data[i]).Author + ','
+      csv += JSON.parse(data[i]).Posted + ','
+      csv += JSON.parse(data[i]).Views + ','
+      csv += JSON.parse(data[i]).CurrentDate + ','
+      csv += JSON.parse(data[i]).ID + ','
+      csv += JSON.parse(data[i]).URL + ','
     }
     let page = `
 <!DOCTYPE html>
@@ -171,7 +171,7 @@ module.exports = {
   <script>
   async function download(){
     if (!window.confirm('Download as .CSV: "youtube_trending" ?')) return;
-    let csv = JSON.stringify(${csv})
+    let csv = '${csv}'
   var dataStr = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
   var anchor = document.getElementById('downloadAnchor');
   anchor.setAttribute("href",     dataStr);
