@@ -102,6 +102,7 @@ module.exports = {
 
 </style>
 <body>
+<a id="downloadAnchor" style="display:none"></a>
   <div id="container">
     <div id="landing">
 
@@ -150,12 +151,11 @@ module.exports = {
   page += `
   <script>
   async function download(){
-    console.log('click')
   var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(${JSON.stringify(data)});
-  var dlAnchorElem = document.getElementById('downloadAnchorElem');
-  dlAnchorElem.setAttribute("href",     dataStr);
-  dlAnchorElem.setAttribute("download", "youtube_trending.json");
-  dlAnchorElem.click();
+  var anchor = document.getElementById('downloadAnchor');
+  anchor.setAttribute("href",     dataStr);
+  anchor.setAttribute("download", "youtube_trending.json");
+  anchor.click();
     }
 
 function warpToTrending(){
