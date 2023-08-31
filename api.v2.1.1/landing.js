@@ -37,7 +37,28 @@ module.exports = {
     display: flex;
   }
 
+
+  /* Firefox */
+  html {
+    scrollbar-color: transparent lightblue;
+    scrollbar-width: thin;
+  }
+  
+  /* WebKit and Chromiums */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: lightblue;
+    border-radius: 5px;
+  }
+
+
   #content {
+    animation: mymove 3s ease-in;
     padding-top: 14px;
     border-left: 1px solid white;
     width: 70%;
