@@ -53,15 +53,28 @@ module.exports = {
   }
 
   #landing h1 {
+    transition: 2s;
     font-size: 80px;
     margin-top: 50px;
   }
+
+  #landing h1 {
+    font-size: 80px;
+    margin-top: 50px;
+    animation: mymove 1.3s linear;
+  }
+
+@keyframes mymove {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
 
   .bracket {
     color: rgb(145, 103, 190);
   }
 
   #landing {
+    animation: mymove 1s ease-in;
     padding-left: 50px;
   }
 
