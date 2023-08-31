@@ -58,7 +58,7 @@ module.exports = {
 
 
   #content {
-    animation: mymove 3s ease-in;
+    animation: mymove 2s ease-in;
     padding-top: 14px;
     border-left: 1px solid white;
     width: 70%;
