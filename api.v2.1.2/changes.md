@@ -22,7 +22,7 @@ fix:
 ```js
 // pivoted from api.v2.1.1 author parser, used output to reparse author + views:
 
-//videoAuthor
+//new videoAuthor parser
 module.exports = {
     videoAuthor: function(body, i, title){
         let videoIds = body.split(`"watchEndpoint":{"videoId":"`) // "}],"accessibility":{"accessibilityData":{"label":"
@@ -41,7 +41,7 @@ module.exports = {
         return c
     }
 }
-//videoViewcount
+//new videoViewcount parser
 module.exports = {
     videoViewCount: function(body, i, title){
         let videoIds = body.split(`"watchEndpoint":{"videoId":"`) // "}],"accessibility":{"accessibilityData":{"label":"
