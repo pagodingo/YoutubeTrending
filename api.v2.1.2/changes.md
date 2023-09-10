@@ -6,11 +6,11 @@ issue:
     "_": 1,
     "Title": "Postgame Interview: Deion Sanders recaps Colorado's dominant win over Nebraska in Week 2",
     // bad author:
-    "Author": "CFB ON FOX 1,561,279 views",
+    //"Author": "CFB ON FOX 1,561,279 views",
     "CurrentDate": "9/10/2023",
     "Posted": "1 day ago",
     // bad views:
-    "Views": "20",
+    //"Views": "20",
     "ID": "d2_iNBoeE8U",
     "URL": "https://www.youtube.com/watch?v=d2_iNBoeE8U"
   }
