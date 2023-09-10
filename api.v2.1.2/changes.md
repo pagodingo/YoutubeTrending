@@ -4,8 +4,8 @@ issue:
 ```json
   {
     "_": 1,
-    // bad title:
     "Title": "Postgame Interview: Deion Sanders recaps Colorado's dominant win over Nebraska in Week 2",
+    // bad author:
     "Author": "CFB ON FOX 1,561,279 views",
     "CurrentDate": "9/10/2023",
     "Posted": "1 day ago",
