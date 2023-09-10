@@ -13,7 +13,7 @@ module.exports = {
       csv += JSON.parse(data[i]).Title + ','
       csv += JSON.parse(data[i]).Author + ','
       csv += JSON.parse(data[i]).Posted + ','
-      csv += JSON.parse(data[i]).Views + ','
+     // csv += JSON.parse(data[i]).Views + ','
       csv += JSON.parse(data[i]).CurrentDate + ','
       csv += JSON.parse(data[i]).ID + ','
       csv += JSON.parse(data[i]).URL + ','
@@ -187,7 +187,7 @@ module.exports = {
       <h5><span>"Author"</span>: "${JSON.parse(data[i]).Author}"</h5>
       <h5><span>"ID"</span>: "${JSON.parse(data[i]).ID}"</h5>
       <h5><span>"Posted"</span>: "${JSON.parse(data[i]).Posted}"</h5>
-      <h5><span>"Views"</span>: "${JSON.parse(data[i]).Views}"</h5>
+    <!--  <h5><span>"Views"</span>: "${JSON.parse(data[i]).Views}"</h5> -->
       <h5><span>"CurrentDate"</span>: "${JSON.parse(data[i]).CurrentDate}"</h5>
       <h5><span>"URL"</span>: "${JSON.parse(data[i]).URL}"</h5>
       </div>`
