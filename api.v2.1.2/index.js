@@ -64,14 +64,12 @@ async function main(event, context) {
         Author: parseAuthor(D, i, parseTitle(D, i)),
         CurrentDate: new Date().toLocaleString('en-US', { timeZone: 'America/New_York', }).split(',')[0],
         Posted: parseDate(D, i),
-       // Views: parseViews(D, i),
+        Views: parseViews(D, i),
         ID: parseId(D, i + 1),
         URL: `https://www.youtube.com/watch?v=${parseId(D, i + 1)}`,
     };  T.push(JSON.stringify(Video))
 
 }
-console.log(T)
-/*
 if (event.rawQuery === 'page=landing'){
   return { statusCode: 200, body: _(T) }
 }
@@ -85,7 +83,6 @@ if (T)
   return { 
     statusCode: 500, body: `whoops`
   }
-}*/
+}
 };
-main()
 exports.handler = main;
