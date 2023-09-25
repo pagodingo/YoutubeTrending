@@ -1,5 +1,5 @@
 [functions]
-  directory = "api.v2.1.3"
+  directory = "api.v2.1.4"
 [[redirects]]
   from = "/"
   to = "/.netlify/functions/index"
