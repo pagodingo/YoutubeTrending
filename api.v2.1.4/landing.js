@@ -30,6 +30,7 @@ module.exports = {
 </head>
 <style>
   body {
+    overflow-y: hidden;
     color: white;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: #05041e;
