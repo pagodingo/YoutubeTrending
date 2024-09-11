@@ -1,0 +1,7 @@
+/node_modules
+# Local Netlify folder
+.netlify
+test.html
+test.json
+preview1.png
+/api.v2.1.1/landing.html

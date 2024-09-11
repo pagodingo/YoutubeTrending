@@ -1,0 +1,6 @@
+[functions]
+  directory = "api.v2.1.5"
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/index"
+  status = 200
