@@ -1,4 +1,4 @@
-<img src="./preview.png">
+<img src="./thumbnail.jpg">
 
 *GET* data from <a href="https://www.youtube.com/trending" target="_blank">youtube/trending</a>
 
