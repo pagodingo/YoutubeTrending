@@ -14,7 +14,7 @@ Although rankings change every 15 minutes, views,  for example, update every few
 |-|-|
 |How does it work?|The data is procured through [web scraping](https://en.wikipedia.org/wiki/Web_scraping). One request is made to retrieve the HTML body of [youtube.com/trending](https://www.youtube.com/trending), and each data point (title, author, view count) is parsed individually, allowing logic to be improved in isolation, and for each data point to be tested individually.
 |What's available?| Currently, there is only one list that serves data from all of [youtube.com/trending](https://www.youtube.com/trending)'s youtube videos. Plans to curate other lists (categories, tracking metrics, rate of change etc.) TBD.|
-|How do I get it?|Download as CSV [here](https://getyoutubetrending.netlify.app?page=landing). You can also open [this link](https://getyoutubetrending.netlify.app/) in your web browser, or (*GET*) it using the HTTP client of your choosing. The response will already be in the form of JSON, and not a JSON string. So there's no need to parse the response. (See code examples)|
+|How do I get it?|Download as CSV [here](https://getyoutubetrending.netlify.app?page=landing). You can also open [this link](https://getyoutubetrending.netlify.app/) in your web browser, or (*GET*) it using the HTTP client of your choosing.
 
 ## Code Examples
 ### axios
