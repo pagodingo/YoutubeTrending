@@ -1,3 +1,6 @@
+## Update: This app / web scraper is tedious to maitain and I've since stopped... well, maintaining it. 😅
+> But, maybe the code is still interesting to you and you'd still like to see how it *used to work! 
+
 <img src="./thumbnail.jpg">
 
 *GET* data from <a href="https://www.youtube.com/trending" target="_blank">youtube/trending</a>
